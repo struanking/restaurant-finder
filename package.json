@@ -1,0 +1,12 @@
+{
+  "name": "node-restaurant-finder",
+  "version": "0.0.1",
+  "dependencies": {
+    "mongojs": "0.5.x",
+    "mongodb": "1.1.11"
+    },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}

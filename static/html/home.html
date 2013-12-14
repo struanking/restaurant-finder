@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>London Restaurants</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" href="/favicon.png"/>
+    <link rel="stylesheet" href="/static/css/lrf.css"/>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="/static/js/lrf.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <header role="banner">
+      <h1>Restaurant Finder</h1>
+    </header>
+
+    <article class="no-js">
+      <p>Sorry, this demo application of Google maps, Nodejs and MongoDB requires a modern browser with JavaScript enabled.</p>
+    </article>
+
+    <article>
+      <form id="finder">
+        <fieldset>
+          <p class="address">
+            <label for="address">Location:</label>
+            <input type="text" size="16" id="address" placeholder="Enter location..."/>
+          </p>
+
+          <p class="radius">
+            <label for="radius">Within:</label>
+            <select id="radius">
+              <option value="0.25" selected>Within 400m</option>
+              <option value="0.5">Within 800m</option>
+              <option value="0.75">Within 1200m</option>
+              <option value="1">Within 1 mile</option>
+              <option selected="selected" value="2">Within 2 miles</option>
+              <option value="4">Within 4 miles</option>
+              <option value="8">Within 8 miles</option>
+              <option value="12">Within 12 miles</option>
+            </select>
+          </p>
+
+          <p class="max-results">
+            <label for="maxResults">Max results:</label>
+            <input type="range" size="2" id="maxResults" min="1" step="1" value="4"/>
+            <span id="maxResults-ui">4</span>
+          </p>
+
+          <p class="search">
+            <button id="search">Search</button>
+          </p>
+        </fieldset>
+      </form>
+
+      <div id="map"></div>
+
+    </article>
+
+  </body>
+</html>
